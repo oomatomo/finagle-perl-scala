@@ -1,0 +1,8 @@
+perl_api:
+  build: ./
+  dockerfile: Dockerfile_perl
+  volumes:
+    - ./:/usr/local/src/
+  ports:
+    - "5000:5000"
+  command: "carton exec plackup -r -p 5000 perl_api.psgi"
