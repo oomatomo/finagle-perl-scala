@@ -1,1 +1,1 @@
-# finagle-perl-scala
+# finagle-perl-scalafinagleを使った、複数言語の切り替えRPCのライブラリは使ってないよ## 使い方Perl apiの起動  `docker-compose up perl_api`Scala apiの起動  `activator com.oomatomo.finaglesample.ApiServer`rpc server の起動  `activator com.oomatomo.finaglesample.RpcServer`hostsの編集  ```127.0.0.1   perl-api127.0.0.1   scala-api```実際に試す```curl --cookie-jar cookie.txt -v "127.0.0.1:5000/account/login"curl --cookie cookie.txt -v "127.0.0.1:9999/api/test/1"```
